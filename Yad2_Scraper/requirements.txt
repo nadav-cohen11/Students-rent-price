@@ -1,0 +1,7 @@
+aiohttp==3.9.5
+pymongo==4.7.2
+beautifulsoup4==4.12.3
+python-dotenv==1.0.1
+geopy==2.4.1
+osmnx==1.9.3
+selenium==4.20.0
