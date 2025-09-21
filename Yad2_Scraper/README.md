@@ -42,17 +42,19 @@ graph TD;
    pip install -r requirements.txt
    ```
 3. **Configure environment variables**
-   Create a `.env` file in `Yad2_Scraper/`:
-   ```env
-   MONGODB_URI=mongodb://localhost:27017
-   DATABASE_NAME=yad2
-   COLLECTION_NAME=listings
-   TOTAL_PAGES=368
-   BATCH_SIZE=15
-   MAX_CONCURRENCY=10
-   SLEEP_BETWEEN_BATCHES=60
-   TIMEOUT_SECONDS=120
+   Set environment variables for configuration. You can export them in your shell or set them when running the script:
+   ```bash
+   export MONGODB_URI=mongodb://localhost:27017
+   export DATABASE_NAME=yad2
+   export COLLECTION_NAME=listings
+   export TOTAL_PAGES=368
+   export BATCH_SIZE=15
+   export MAX_CONCURRENCY=10
+   export SLEEP_BETWEEN_BATCHES=60
+   export TIMEOUT_SECONDS=120
    ```
+   
+   Alternatively, you can create your own `.env` file locally (not tracked by git) with the above variables.
 
 ---
 
@@ -77,7 +79,7 @@ python main.py
 ---
 
 ## Configuration
-- All runtime parameters are controlled via environment variables (see `.env` example above).
+- All runtime parameters are controlled via environment variables (see configuration example above).
 - For production, tune `BATCH_SIZE`, `MAX_CONCURRENCY`, and `TIMEOUT_SECONDS` based on your hardware/network.
 - MongoDB connection and collection are fully configurable.
 
